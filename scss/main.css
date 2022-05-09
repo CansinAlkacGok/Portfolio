@@ -17,12 +17,6 @@ body {
           animation: move-twink-back 500s linear infinite;
 }
 
-header {
-  height: 100vh;
-  /* background: rgb(1, 10, 36) url(../img/stars.png) repeat top center;
-  animation: move-twink-back 500s linear infinite; */
-}
-
 @-webkit-keyframes move-twink-back {
   from {
     background-position: 0 0;
@@ -41,96 +35,40 @@ header {
   }
 }
 
-.drop-down {
-  position: relative;
-  /*   &::after{
-    content: "\f00d";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    font-size: 5rem;
-    color: rgb(7, 36, 90);
-    position: absolute;
-    right: 2rem;
-    visibility: hidden;
-  } */
-  /*  &:hover::after{
-      visibility: visible;
-      transition: all infinite ease-in;
-  } */
+header {
+  height: 100vh;
+  /* background: rgb(1, 10, 36) url(../img/stars.png) repeat top center;
+  animation: move-twink-back 500s linear infinite; */
 }
 
-.drop-down nav {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  right: 0;
-  top: 10rem;
-  text-align: center;
+.drop-down nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 3rem;
+  padding: 3rem;
+  gap: 10rem;
 }
 
 .drop-down nav ul li {
   list-style-type: none;
-  margin-top: 15rem;
-  font-family: "Inconsolata", monospace;
-  font-weight: 700;
-  font-size: 4rem;
-}
-
-.drop-down nav ul li:hover {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
 .drop-down nav ul li a {
-  /*  color: rgb(7, 36, 90); */
-  color: #64ffda;
   text-decoration: none;
+  font-family: "Inconsolata", monospace;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #64ffda;
 }
 
 .drop-down nav ul li a:hover {
-  color: #3ca0e7;
-}
-
-.drop-down::before {
-  content: "\f141";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  font-size: 5rem;
-  color: #07245a;
-  position: absolute;
-  right: 2rem;
-}
-
-.drop-down:hover nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 95vh;
-  /* background-color: rgba(40, 123, 156, 1); */
-  background: #010a24 url(../img/stars.png) repeat top center;
-  top: 5vh;
-  -webkit-animation: move-twink-back 500s linear infinite;
-          animation: move-twink-back 500s linear infinite;
-}
-
-.drop-down:hover::before {
-  -webkit-transform: rotate(2turn);
-          transform: rotate(2turn);
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-  /*  visibility: hidden; */
+  font-size: 2.5rem;
+  -webkit-transition: font-size 0.7s ease;
+  transition: font-size 0.7s ease;
 }
 
 .drop-down nav ul li a:hover,
@@ -357,6 +295,12 @@ section.works article img {
   display: block;
 }
 
+section.works article img:hover {
+  opacity: .5;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
 section.works article button {
   padding: 1rem;
   border-radius: 10px;
@@ -428,12 +372,114 @@ footer p {
   font-family: "EB Garamond", serif;
 }
 
+@media (max-width: 768px) {
+  .drop-down {
+    position: relative;
+    /*   &::after{
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 5rem;
+    color: rgb(7, 36, 90);
+    position: absolute;
+    right: 2rem;
+    visibility: hidden;
+  } */
+    /*  &:hover::after{
+      visibility: visible;
+      transition: all infinite ease-in;
+  } */
+  }
+  .drop-down nav {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 10rem;
+    text-align: center;
+  }
+  .drop-down nav ul li {
+    list-style-type: none;
+    margin-top: 15rem;
+    font-family: "Inconsolata", monospace;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  .drop-down nav ul li:hover {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  .drop-down nav ul li a {
+    /*  color: rgb(7, 36, 90); */
+    color: #64ffda;
+    text-decoration: none;
+  }
+  .drop-down nav ul li a:hover {
+    color: #3ca0e7;
+  }
+  .drop-down::before {
+    content: "\f141";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 5rem;
+    color: #07245a;
+    position: absolute;
+    right: 2rem;
+  }
+  .drop-down:hover nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 95vh;
+    /* background-color: rgba(40, 123, 156, 1); */
+    background: #010a24 url(../img/stars.png) repeat top center;
+    top: 5vh;
+    -webkit-animation: move-twink-back 500s linear infinite;
+            animation: move-twink-back 500s linear infinite;
+  }
+  .drop-down:hover nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .drop-down:hover::before {
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+    /*  visibility: hidden; */
+  }
+}
+
 @media (min-width: 992px) {
   h1 {
     line-height: 15vh;
     padding: 25rem 10rem;
   }
-  .works div {
+  #about-me {
+    margin-top: 15rem;
+  }
+  #works {
+    margin-top: 8rem;
+  }
+  #works div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -441,11 +487,11 @@ footer p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .works div article {
+  #works div article {
     width: 40%;
     margin-top: 5rem;
   }
-  .works div article img {
+  #works div article img {
     width: 90%;
   }
   #contact {
